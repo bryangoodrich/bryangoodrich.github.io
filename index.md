@@ -1,12 +1,11 @@
 365 Days of Coding in 2017
 ==========================
 
-I think it's valuable to set goals that you can measure successfully.
-Nothing is easier than simply getting some coding done at least once a day.
-Certainly it is a challenge, as we all have busy lives with unexpected events.
-Nevertheless, I want to give it a go!
+It's valuable to set goals that you can measure successfully, and what's
+easier than spending an hour to code once a day? While we all have busy lives
+and unexpected events, I find it worthwhile to give it a shot!
 
-At least initially, some areas of coding I wish to improve
+Some areas of coding I wish to improve
 
 * getting comfortable with web dev and all the new ways to make data science usable
 * specifically thinking about D3, but general web design and web services will be useful
@@ -27,4 +26,8 @@ goal will help me get there! At least I hope others can find this daily log valu
 
 Cheers!
 
+
+[Day 1](day/1.md)
+
+[Day 2](day/2.md)
 
