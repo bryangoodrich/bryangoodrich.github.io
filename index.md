@@ -23,9 +23,8 @@ Cheers!
 
 ### Day List
 
-*Coming soon*: Rmarkdown knitted for R code examples. Using Notebooks once I do Python examples. 
+[Day 1](day/1.md) - Naive Bayes and Joint Probability Distributions
 
-[Day 1](day/1.md)
+[Day 2](day/2.md) - kd-tree based nearest neighbors and Electricity Load Shapes
 
-[Day 2](day/2.md)
-
+[Day 3](day/3.html) - Day 1 and 2 in markdown form
