@@ -27,4 +27,6 @@ Cheers!
 
 [Day 2](day/2.md) - kd-tree based nearest neighbors and Electricity Load Shapes
 
-[Day 3](day/3.html) - Day 1 and 2 in markdown form
+[Day 3](day/3.html) - R Markdown for Day 1 and 2
+
+[Day 4](day/4.html) - Dollar Cost Average (DCA)
