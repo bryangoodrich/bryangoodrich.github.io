@@ -30,3 +30,9 @@ Cheers!
 [Day 3](day/3.html) - R Markdown for Day 1 and 2
 
 [Day 4](day/4.html) - Dollar Cost Average (DCA)
+
+[Day 5](day/5.html) - Bayesian Bust!
+
+[Day 6](day/6.html) - Spatial Data Viz Exercises
+
+[Day 7](day/7.html) - Bag of Words Clustering
