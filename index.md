@@ -1,27 +1,20 @@
-# 365 Days of Coding in 2017
+# Let's Code!
 
+Going into 2017, I'm hitting the ground running. Everyday I will commit 30-60 minutes to coding for data science, covering whatever topics come to mind (usually my RSS feeds or Twitter). 
 
-It's valuable to set goals, and what better way to measure success than having 365 days of code examples showing your progress? Hopefully, this exercise will prove useful to others, too! 
+Areas of special interest
 
-***
-Some areas of coding I wish to improve
-
-* Web development, particularly for data science, using or serving up D3 visuals and API.
-* Standard OOP design patterns (see Head First).
-* Functional programming paradigms, especially applied to R and Python.
-* Everything Python. I've lived R for 10 years, it's about time I get as fluid with Python.
-* Interested in what Microsoft R Services can improve.
-* Need real experience using distributed and cloud computing in general; expect Hadoop examples!
-* Along those lines, I need to get comfortable with Spark and SparkML
-* Further, I'd like to be comfortable whipping together a Hadoop MR job in Java
+* Web development (API, D3, Node, Bootstrap)
+* Standard OOP design patterns (see Head First)
+* Functional programming paradigms, especially applied to R and Python
+* Py, Py, Python! Used R over a decade. Time to get fluid with Python
+* Microft. I'm impressed with their data science direction + R Services and Azure
+* Distributed technology (Hadoop, AWS, Azure blobstore)
+* Along those lines: Spark, Spark, oh and SparkML!
 
 ***
 
-
-Cheers!
-
-
-### Day List
+### Follow Along
 
 [Day 1](day/1.md) - Naive Bayes and Joint Probability Distributions
 
