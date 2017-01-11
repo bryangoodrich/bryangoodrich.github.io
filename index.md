@@ -36,3 +36,7 @@ Cheers!
 [Day 6](day/6.html) - Spatial Data Viz Exercises
 
 [Day 7](day/7.html) - Bag of Words Clustering
+
+[Day 8](day/8.html) - Bag of Words Topic Modeling
+
+[Day 9](day/9.html) - PCA Electricity Load Profiles
