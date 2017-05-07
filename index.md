@@ -11,23 +11,23 @@ My goal with this blog is to cover 3 things.
 
 ### Challenge Section
 
-[CHallenge 1](day/1.md) - Naive Bayes and Joint Probability Distributions
+[Challenge 1](challenges/1.md) - Naive Bayes and Joint Probability Distributions
 
-[Challenge 2](day/2.md) - kd-tree based nearest neighbors and Electricity Load Shapes
+[Challenge 2](challenges/2.md) - kd-tree based nearest neighbors and Electricity Load Shapes
 
-[Challenge 3](day/3.html) - R Markdown for Challenge 1 and 2
+[Challenge 3](challenges/3.html) - R Markdown for Challenge 1 and 2
 
-[Challenge 4](day/4.html) - Dollar Cost Average (DCA)
+[Challenge 4](challenges/4.html) - Dollar Cost Average (DCA)
 
-[Challenge 5](day/5.html) - Bayesian Bust!
+[Challenge 5](challenges/5.html) - Bayesian Bust!
 
-[Challenge 6](day/6.html) - Spatial Data Viz Exercises
+[Challenge 6](challenges/6.html) - Spatial Data Viz Exercises
 
-[Challenge 7](day/7.html) - Bag of Words Clustering
+[Challenge 7](challenges/7.html) - Bag of Words Clustering
 
-[Challenge 8](day/8.html) - Bag of Words Topic Modeling
+[Challenge 8](challenges/8.html) - Bag of Words Topic Modeling
 
-[Challenge 9](day/9.html) - PCA Electricity Load Profiles
+[Challenge 9](challenges/9.html) - PCA Electricity Load Profiles
 
 
 
