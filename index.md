@@ -1,4 +1,4 @@
-# Sacramento Data Science and Machine Learning Blog
+# Sacramento Data Science and Machine Learning
 
 Welcome to my [Coding](http://www.github.com/bryangoodrich) blog!
 
