@@ -1,3 +1,5 @@
+Welcome to my Git Pages Repo. Not much to say here at this time. I'm just going to leave the Moon Theme default content because I think this theme is pretty badass. 
+
 # Moon Jekyll Theme [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)  
   
 ## `Sorry guys but there will be no update until I buy a new laptop.`
