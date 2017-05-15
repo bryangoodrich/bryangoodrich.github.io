@@ -1,7 +1,7 @@
 # Site
 title:              Sacramento Data Science and Machine Learning
-bio:                'My Bio'
-description:        "My Description"
+bio:                "A Local Data Scientist's Coding Blog" 
+description:        "Trying to Help the Community Thrive via Everything Data"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
@@ -26,7 +26,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   bryangoodrich
+disqus_shortname:   disqus_HKmgZKUXQv
 
 # Social
 # if you don't have any of social below, comment the line.
