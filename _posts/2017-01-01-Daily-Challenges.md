@@ -8,6 +8,7 @@ comments: true
 ---
 
 
+The start of my Git Pages site began with doing some daily challenges to work on my coding skills. However, with taking up some more physical challenges (i.e., working out 2 or 3 times a day, training for a marathon, power lifting, etc.), that fell by the wayside. Now I'm reinventing this site using a new (and awesome!) theme I really like. However, I did not want to lose all of the content from that initial launch at the start of the year. Below, I migrated the R markdown files to their markdown results as best I could. If there is anything wrong, go ahead and let me know either in a comment or a bug fix on the site repo. Otherwise, enjoy!
 
 -------------------------------------------------------------------------------
 # Day 1
