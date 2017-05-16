@@ -3,7 +3,7 @@ layout: post
 title: "Daily Challenges"
 date: 2017-01-01
 excerpt: "Getting Work Done"
-tags: [challenge, R, examples]
+tags: [challenge, R, examples, code]
 comments: true
 ---
 
@@ -21,7 +21,7 @@ For inspiration on how to set up the marginal plots, see http://www.statmethods.
 
 
 
-~~~r
+~~~ r
 library(e1071)  # naiveBayes
 library(RColorBrewer) # brewer.pal
 
@@ -85,7 +85,7 @@ plot_density(SL, 4, 8, flip = TRUE)
 
 ![plot of chunk dayone](../assets/img/dayone-1.png)
 
-~~~r
+~~~ r
 # See the marginals among sepal and petal widths
 par(fig = c(0.0, 0.8, 0.0, 0.8), mar = c(5, 4, 0, 0))
 plot(Sepal.Width ~ Petal.Width, iris, col = pal[Species], 
@@ -114,7 +114,7 @@ Since I currently work as a data scientist at an electricity utilty, I found som
 
 
 
-~~~r
+~~~ r
 library(RANN)  # nn
 library(reshape2)  # dcast
 
@@ -192,7 +192,7 @@ The set up is each month we spend $1,000 to purchase as many shares as possible.
 For those that don't know, the `'2016::'` subset gets everything 2016 and beyond. The `to.monthly` (*xts*) function grabs the first value of each month. The `Op` (*quantmod*) function extracts the Opening column of the stock symbol object. This sets us up to work with the open value the first of each month when we hypothetically make a purchase. 
 
 
-~~~r
+~~~ r
 library(quantmod)
 getSymbols("IVE")
 ~~~
@@ -201,7 +201,7 @@ getSymbols("IVE")
 ## [1] "IVE"
 ~~~
 
-~~~r
+~~~ r
 # Percent change between start to end
 q <- function(start, end) (end-start) / start
 
@@ -220,7 +220,7 @@ sum(invested - 1000)  # Total amount extra spent above $1,000 each month
 ## [1] 621.6201
 ~~~
 
-~~~r
+~~~ r
 sum(invested)  # Total invested (without changes)
 ~~~
 
@@ -228,7 +228,7 @@ sum(invested)  # Total invested (without changes)
 ## [1] 16621.62
 ~~~
 
-~~~r
+~~~ r
 sum(purchased)  # Total shares after period
 ~~~
 
@@ -236,7 +236,7 @@ sum(purchased)  # Total shares after period
 ## [1] 176
 ~~~
 
-~~~r
+~~~ r
 result <- c(
     'dca_result' = sum(q(x, final_price) * invested),
     'lump_result' = sum(invested) * q(x[1], final_price),
@@ -255,7 +255,7 @@ So I'll just assume I didn't screw this up. We see that the DCA result was no wh
 Now let's see about over the last decade
 
 
-~~~r
+~~~ r
 x <- Op(to.monthly(IVE))
 x <- as.vector(x)
 n <- length(x)
@@ -271,7 +271,7 @@ sum(invested - 1000)  # Total amount extra spent above $1,000 each month
 ## [1] 4221.88
 ~~~
 
-~~~r
+~~~ r
 sum(invested)  # Total invested (without changes)
 ~~~
 
@@ -279,7 +279,7 @@ sum(invested)  # Total invested (without changes)
 ## [1] 128221.9
 ~~~
 
-~~~r
+~~~ r
 sum(purchased)  # Total shares after period
 ~~~
 
@@ -287,7 +287,7 @@ sum(purchased)  # Total shares after period
 ## [1] 1880
 ~~~
 
-~~~r
+~~~ r
 result <- c(
     'dca_result' = sum(q(x, final_price) * invested),
     'lump_result' = sum(invested) * q(x[1], final_price),
@@ -321,7 +321,7 @@ One thing I did was take the code the author had and wrapped it in a closure so 
 Here he hardcodes the career variables directly into the ll function.
 
 
-~~~r
+~~~ r
 library(VGAM)
 
 # negative log likelihood of data given alpha; beta
@@ -341,7 +341,7 @@ Instead of hardcoding the variable values into the function. I make it available
 If you don't know, a *closure* is basically a function that returns a function. In an analogy to object-oriented programming (OOP), it's like encapsulating information inside the function, because as functional languages go (R included), the function has its own memory space. Thus, when we define a function, we can enclose (closure) data inside the function. Along with ideas of not mutating data and what R calls promises (lazy evaluation), closures are very powerful constructs to make use of. This isn't an amazing example, but it certainly makes the function more flexible in a very easy-to-use way. 
 
 
-~~~r
+~~~ r
 ll <- function(success, total)
 {
     function(alpha, beta)
@@ -377,7 +377,7 @@ I'll leave it to you to get the 2008 data set, run the author's code to prep it,
 Now let's dig in!
 
 
-~~~r
+~~~ r
 # Libraries
 library(dplyr)
 library(ggplot2)
@@ -400,7 +400,7 @@ Query the map of United States using the get_map function.
 It is recommended to experiment with the various types of maps and select the one that you think is the best. (I have used the toner-lite from Stamen Maps.)
 
 
-~~~r
+~~~ r
 usmap <- get_map("united states", maptype = "toner-lite", zoom=4, filename = "day/data/usmap", source ='stamen')
 ~~~
 
@@ -411,7 +411,7 @@ Print the map that you have selected.
 Modify the printed map in order to print out a bigger image( extent) and assign it to a m object.
 
 
-~~~r
+~~~ r
 m <- ggmap(usmap)
 ~~~
 
@@ -420,7 +420,7 @@ m <- ggmap(usmap)
 Plot the destination airports of the flights on the map.
 
 
-~~~r
+~~~ r
 m + geom_point(aes(long, lat), data = airports, alpha = 0.2)  # Lots of overplotting!
 ~~~
 
@@ -435,7 +435,7 @@ m + geom_point(aes(long, lat), data = airports, alpha = 0.2)  # Lots of overplot
 Plot the destination airports of the flights on the map, the size of the points should be based on the number of flights that arrived to the destination airports.
 
 
-~~~r
+~~~ r
 x <- flights %>% 
     group_by(Dest) %>%
     summarise(arrivals = n()) %>%
@@ -454,7 +454,7 @@ m + geom_point(aes(long, lat, size = arrivals), data = x)
 Plot the destination airports of the flights on the map, the colour of the points should be based on the number of flights that arrived to the destination airport. Make it a bit prettier, use the scale_colour_gradient and set the lows and the highs of your preferences.
 
 
-~~~r
+~~~ r
 x <- flights %>% 
     group_by(Dest) %>%
     summarise(arrivals = n()) %>%
@@ -475,7 +475,7 @@ Plot the destination airports of the flights on the map, the colour of the point
 Something is not right here, right?
 
 
-~~~r
+~~~ r
 x <- flights %>% 
     group_by(Dest) %>%
     summarise(arrivals = n(), delay = sum(ArrDelay)) %>%
@@ -495,7 +495,7 @@ m + geom_point(aes(long, lat, color = arrivals, size = delay), data = x) +
 Plot the destination airports of the flights on the map, the colour of the points should be based on the number of flights that arrived to the destination airport and the size of the points should be based on the total delay of arrival divided by the number of flights per destination.
 
 
-~~~r
+~~~ r
 x <- flights %>% 
     group_by(Dest) %>%
     summarise(arrivals = n(), delay = sum(ArrDelay)) %>%
@@ -516,7 +516,7 @@ m + geom_point(aes(long, lat, color = arrivals, size = delay_per_flight), data =
 Plot the destination airports for everyday of the week (hint : facet_wrap )
 
 
-~~~r
+~~~ r
 x <- flights %>% 
     group_by(Dest, day_of_week) %>%
     summarise(arrivals = n(), delay = sum(ArrDelay)) %>%
@@ -539,7 +539,7 @@ Plot the destination airports of the flights on the map, the colour of the point
 (This may be a bit more challenging , if you can’t solve it go to the solutions and try to understand the reason I did what I did, if you have any questions please post them at the comment section).
 
 
-~~~r
+~~~ r
 x <- flights %>% 
     group_by(Dest, day_of_week) %>%
     summarise(arrivals = sum(ifelse(Cancelled == 0, 1, 0)), delay = sum(ArrDelay)) %>%
@@ -591,7 +591,7 @@ First, the libraries to be used.
 If you'd like to get the data directly from the sources, here is the author's code for that. 
 
 
-~~~r
+~~~ r
 # https://archive.ics.uci.edu/ml/datasets/Bag+of+Words
 # download the smallest example bag of words for first trial
 if(!"docword.kos.txt" %in% list.files())
@@ -610,7 +610,7 @@ I work from my own file structure, so I'll just assume you can get the data in h
 Here I pull in the bag of words structured data (see the UCI documentation), the vocab associated with it (each line represents the line number in the UCI file)
 
 
-~~~r
+~~~ r
 kos_header <- c("DocId", "VocabId", "Count")
 vocab <- scan("~/Personal/Data/vocab.kos.txt", what = "")
 x <- read.table("~/Personal/Data/docword.kos.txt", skip = 3, col.names = kos_header)
@@ -626,7 +626,7 @@ y$DocId <- NULL  # Column not needed; each row is its DocId
 Here we can run multiple models efficiently with parallel processing. It still takes some time (did 30 models); I ran this and saved the resultant S4 object of model objects to be used in the next steps. 
 
 
-~~~r
+~~~ r
 kc <- stepFlexclust(y, 2:10, FUN = cclust, seed = 2017, multicore = TRUE)
 saveRDS(kc, file = '~/Personal/Data/kos_models.Rds', compress='xz')
 ~~~
@@ -638,7 +638,7 @@ While a more in-depth analysis of the resultant models to find the 'best' one us
 If you've not used *flexclust* the `parameters` function lets you access the cluster centroids of your model object. See also the `info` function that you can use to access key information, such as distance measures and cluster sizes.
 
 
-~~~r
+~~~ r
 # A convenience closure
 topN <- function(N) function(k, model) head(sort(parameters(model)[k, ], TRUE), n = N)
 
@@ -688,7 +688,7 @@ First, the libraries to be used.
 If you'd like to get the data directly from the sources, here is the author's code for that. 
 
 
-~~~r
+~~~ r
 # https://archive.ics.uci.edu/ml/datasets/Bag+of+Words
 # download the smallest example bag of words for first trial
 if(!"docword.kos.txt" %in% list.files())
@@ -707,7 +707,7 @@ I work from my own file structure, so I'll just assume you can get the data in h
 Here I pull in the bag of words structured data (see the UCI documentation), the vocab associated with it (each line represents the line number in the UCI file)
 
 
-~~~r
+~~~ r
 kos_header <- c("DocId", "VocabId", "Count")
 vocab <- scan("~/Personal/Data/vocab.kos.txt", what = "")
 x <- read.table("~/Personal/Data/docword.kos.txt", skip = 3, col.names = kos_header)
@@ -725,7 +725,7 @@ y <- y[, -exclude]
 Here we run through fitting a model of size k = 5. I could set up a loop (lapply) to produce a number of models to compare, but in keeping consistent with yesterday, I'll just stick to a 5 topic model. Since it is still a time consuming process even for one model, I'll save the results and use them afterwards. 
 
 
-~~~r
+~~~ r
 lda <- LDA(y, 5)
 saveRDS(lda, file = "~/Personal/Data/kos_topics.Rds", compress = 'xz')
 ~~~
@@ -735,7 +735,7 @@ saveRDS(lda, file = "~/Personal/Data/kos_topics.Rds", compress = 'xz')
 Not a large change from the clustering method yesterday. Basically pull the top 100 sorted (descending) words from each topic in the model. These are accessible from the terms matrix when you run `posterior` on your LDA object. 
 
 
-~~~r
+~~~ r
 # A convenience closure
 topN <- function(N=100) function(k, terms) head(sort(terms[k, ], TRUE), n = N)
 
@@ -785,7 +785,7 @@ I forget what exactly I was looking at ([but this is good](https://tgmstat.wordp
 ### Data Prep
 
 
-~~~r
+~~~ r
 infile <- "~/Personal/Data/RefBldgMediumOfficeNew2004_7.1_5.0_3B_USA_CA_LOS_ANGELES.csv"
 x <- read.csv(infile, as.is = TRUE)[1:2]  # Only using Electricity
 names(x) <- c("datetime", "kwh")
@@ -805,7 +805,7 @@ At the end, we can see the distinct difference in weekend vs weekday behavior wh
 
 
 
-~~~r
+~~~ r
 pca <- prcomp(y[-1])
 p <- data.frame(pca$x[, 1:2])  # Grab out the 1st two principal components
 p$weekday <- weekdays(y$day)
@@ -815,13 +815,13 @@ plot(PC2 ~ PC1, p, pch = 20, col = weekend)  # Weekends are Red
 
 ![plot of chunk pca](../assets/img/pca-1.png)
 
-~~~r
+~~~ r
 biplot(pca, scale = 0)
 ~~~
 
 ![plot of chunk pca](../assets/img/pca-2.png)
 
-~~~r
+~~~ r
 x$weekday <- weekdays(x$day)  # For coloring
 ggplot(x) + aes(hour, kwh, group = day, color = weekday) + geom_line(alpha = .2)
 ~~~
