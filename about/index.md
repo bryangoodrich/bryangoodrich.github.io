@@ -27,10 +27,10 @@ Until I add my own content ... here's the default theme details! :p
 ## Preview
 
 {% capture images %}
-    /assets/img/bryan-bald.jpg
-	/assets/img/bryan-stash.jpg
-	/assets/img/bryan-goat.jpg
-	/assets/img/bryan-bearded.jpg
+    /assets/img/bryan-bald.png
+	/assets/img/bryan-stash.png
+	/assets/img/bryan-goat.png
+	/assets/img/bryan-bearded.png
 {% endcapture %}
 {% include gallery images=images caption="Many Faces of Bryan Goodrich" cols=4 %}
 
