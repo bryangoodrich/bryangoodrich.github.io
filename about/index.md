@@ -32,7 +32,7 @@ Until I add my own content ... here's the default theme details! :p
 	../assets/img/bryan-goat.jpg
 	../assets/img/bryan-bearded.jpg
 {% endcapture %}
-{% include gallery images=images caption="Many Faces of Bryan Goodrich" cols=2 %}
+{% include gallery images=images caption="Many Faces of Bryan Goodrich" cols=4 %}
 
 See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
 
