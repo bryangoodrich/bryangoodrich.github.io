@@ -9,7 +9,7 @@ comments: false
 
 # About Me
 
-I have lived among spreadsheets, and walked among data scientists. I have bested bad data, and saved broken imports. As a data engineer, my passion is architecting solutions that empower developers to solve many problems--abstract, automate, and APIs. 
+I have lived among spreadsheets, and walked among data scientists. I have bested bad data, and saved broken imports. As a data engineer, my passion is architecting solutions that empower developers to solve many problems: abstract, automate, and APIs. 
 
 This blog is my space to share my experiences and best practices that I have learned work within my sphere of influence. 
 
