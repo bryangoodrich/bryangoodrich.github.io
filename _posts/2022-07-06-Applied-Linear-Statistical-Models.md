@@ -7,6 +7,8 @@ tags: [code, statistics, machine learning]
 comments: true
 ---
 
+![Applied Linear Statistical Models (5th ed.)](../assets/img/alsm.jpg "Applied Linear Statistical Models (5th edition)")
+
 # Applied Linear Statistical Models
 
 ## Background
