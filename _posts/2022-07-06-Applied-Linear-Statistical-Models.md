@@ -5,8 +5,6 @@ date: 2022-07-06
 excerpt: Python and R code for ALSM Examples
 tags: [code, statistics, machine learning]
 comments: true
-url: applied-linear-statistical-models
-logo: ../assets/img/alsm.jpg
 ---
 
 ![Book logo](../assets/img/alsm.jpg "Applied Linear Statistical Models (5th edition)")
