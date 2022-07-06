@@ -45,7 +45,7 @@ Cheers
 
 [Chapter 8](https://github.com/bryangoodrich/ALSM/blob/main/notebooks/chapter08.ipynb) &ndash; Regression Models for Quantitative and Qualitative Predicators
 
-[Chapter 9](https://github.com/bryangoodrich/ALSM/blob/main/notebooks/chapter00.ipynb) &ndash; Building the Regression Model I: Model Selection and Validation
+[Chapter 9](https://github.com/bryangoodrich/ALSM/blob/main/notebooks/chapter09.ipynb) &ndash; Building the Regression Model I: Model Selection and Validation
 
 [Chapter 10](https://github.com/bryangoodrich/ALSM/blob/main/notebooks/chapter10.ipynb) &ndash; Building the Regression Model II: Diagnostics
 
