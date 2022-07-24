@@ -17,7 +17,7 @@ For comparison, we can leverage the [Real Python - Factory Method Pattern](https
 
 In the link above, they create a `Song` class and `SongSerializer` class (interface) for converting a `Song` object into a given serialized format. I leave it to the reader to delve into their lesson, as it is very good. Here is their final code.
 
-```{python}
+```
 class SongSerializer:
     def serialize(self, song, format):
         serializer = get_serializer(format)
